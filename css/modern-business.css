@@ -90,6 +90,17 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
+
+    .social-inline{
+        width:: 70%;
+        margin: auto;
+    }
+    .social-inline li{
+        margin: auto;
+        float: left;
+        padding: 5px;
+    }
+
 }
 
 .clear{
