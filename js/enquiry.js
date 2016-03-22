@@ -3,6 +3,10 @@
    example is taken from jqBootstrapValidation docs 
   */
 $(function() {
+    $("#contactForm #cancel").on("click",function(e){
+        e.preventDefault();
+        $("#contactForm").trigger("reset");
+    })
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -18,18 +22,24 @@ $(function() {
             var email = $("input#email").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
+            var companyName = $("select#country").val();
+            var address = $("textarea#address").val();
+            var country = $("input#country").val();
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "/bin/contact_me.php",
+                url: "/bin/enquiry.php",
                 type: "POST",
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message
+                    message: message,
+                    companyName: companyName,
+                    address: address,
+                    country: country
                 },
                 cache: false,
                 success: function() {
