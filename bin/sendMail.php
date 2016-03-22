@@ -51,3 +51,4 @@ function sendMail($toEmail, $content, $subject, $name){
 	    echo "Message sent!";
 	}
 }
+?>
