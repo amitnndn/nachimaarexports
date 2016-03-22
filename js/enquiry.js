@@ -22,9 +22,9 @@ $(function() {
             var email = $("input#email").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
-            var companyName = $("select#country").val();
+            var country = $("select#country").val();
             var address = $("textarea#address").val();
-            var country = $("input#country").val();
+            var companyName = $("input#company").val();
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
