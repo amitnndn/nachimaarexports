@@ -94,6 +94,7 @@ footer {
     .social-inline{
         width:: 70%;
         margin: auto;
+        list-style-type: none;
     }
     .social-inline li{
         margin: auto;
@@ -101,6 +102,11 @@ footer {
         padding: 5px;
     }
 
+}
+.social-inline li{
+    padding: 5px; 
+    float: left;
+    list-style-type: none;
 }
 
 .clear{
