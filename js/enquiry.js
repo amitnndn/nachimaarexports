@@ -25,12 +25,13 @@ $(function() {
             var country = $("select#country").val();
             var address = $("textarea#address").val();
             var companyName = $("input#company").val();
+            var formType = "enquiry";
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "/bin/enquiry.php",
+                url: "/bin/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -39,7 +40,8 @@ $(function() {
                     message: message,
                     companyName: companyName,
                     address: address,
-                    country: country
+                    country: country,
+                    formType: formType
                 },
                 cache: false,
                 success: function() {
@@ -60,7 +62,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + " it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:me@example.com?Subject=Message_Me from myprogrammingblog.com;>me@example.com</a> ? Sorry for the inconvenience!");
+                    $('#success > .alert-danger').append("<strong>Sorry " + name + " it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:info@nachimaarexports.com?Subject=Contact From "+ name +";>info@nachimaarexports.com</a> ? Sorry for the inconvenience!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
