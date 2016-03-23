@@ -4,7 +4,7 @@
 */
 $(document).ready(function(){
 	
-	var title = "Nachimaare Exports";
+	var title = "Nachimaar Exports";
 	var url = window.location.href;
 	
 	if(url.indexOf("products/index.html") >= 0){
