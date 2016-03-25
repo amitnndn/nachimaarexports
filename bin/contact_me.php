@@ -25,7 +25,7 @@ switch($formType){
 		$email_subject = "Website Contact Form:  $name";
 		$email_body = "You have received a new message from your website contact form.<br/>"."Here are the details:<br/><br/>Name: $name<br/><br/>Email: $email_address<br/><br/>Phone: $phone<br/><br/>Message:<br/>$message";
 		$email_body_recepient = "Hi $name,<br/><br/>Thank you for contacting Nachimaar Exports Pvt. Ltd. Our representative will get back to you shortly.<br/><br/>If you think your contact details are wrong, please reply back to this mail with the correct contact details.<br/><br/>Regards,<br/>Team Nachimaare Exports Pvt. Ltd.";
-		$email_subject_recepient = "Thank you for contacting Nachimaare Exports Pvt. Ltd.";
+		$email_subject_recepient = "Thank you for contacting Nachimaar Exports Pvt. Ltd.";
 		break;
 	case "enquiry": 
 		$status = 1;
@@ -39,7 +39,7 @@ switch($formType){
 						"Message:<br/>$message<br/><br/>Address:<br/> $address<br/><br/>".
 						"Company Name: $companyName<br/><br/>Country: $country<br/><br/>";
 		$email_body_recepient = "Hi $name,<br/><br/>Thank you for contacting Nachimaar Exports Pvt. Ltd. Our representative will get back to you shortly.<br/><br/>If you think your contact details are wrong, please reply back to this mail with the correct contact details.<br/><br/>Regards,<br/>Team Nachimaare Exports Pvt. Ltd.";
-		$email_subject_recepient = "Thank you for contacting Nachimaare Exports Pvt. Ltd.";
+		$email_subject_recepient = "Thank you for contacting Nachimaar Exports Pvt. Ltd.";
 		break;
 	default: 
 		$status = 0;
